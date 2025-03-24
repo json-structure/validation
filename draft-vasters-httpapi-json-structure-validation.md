@@ -51,9 +51,9 @@ normative:
   RFC2119:
   RFC4646:
   RFC8174:
-  JSTRUCT-CORE: 
+  JSTRUCT-CORE:
     title: "JSON Structure Core"
-    author: 
+    author:
       - fullname: Clemens Vasters
     target: https://json-structure.github.io/core/draft-vasters-httpapi-json-structure-core.html
   ECMA_262_2022:
@@ -228,16 +228,16 @@ MUST be a string. The `format` keyword adds additional standard validation
 constraints not covered by the extended types in the core specification without
 the need to define an explicit regular expression `pattern`.
 
-- `ipv4` – Internet Protocol version 4 address  
-- `ipv6` – Internet Protocol version 6 address  
-- `email` – Email address  
-- `idn-email` – Internationalized email address  
-- `hostname` – Hostname  
-- `idn-hostname` – Internationalized hostname  
-- `iri` – Internationalized Resource Identifier  
-- `iri-reference` – Internationalized Resource Identifier reference  
-- `uri-template` – URI template  
-- `relative-json-pointer` – Relative JSON pointer  
+- `ipv4` – Internet Protocol version 4 address
+- `ipv6` – Internet Protocol version 6 address
+- `email` – Email address
+- `idn-email` – Internationalized email address
+- `hostname` – Hostname
+- `idn-hostname` – Internationalized hostname
+- `iri` – Internationalized Resource Identifier
+- `iri-reference` – Internationalized Resource Identifier reference
+- `uri-template` – URI template
+- `relative-json-pointer` – Relative JSON pointer
 - `regex` – Regular expression
 
 ## Array and Set Validation Keywords {#array-and-set-validation-keywords}
@@ -451,7 +451,7 @@ Example:
 {
   "type": "object",
   "properties": {
-    "name": { 
+    "name": {
       "type": "string",
       "default": "John Doe"
     }
