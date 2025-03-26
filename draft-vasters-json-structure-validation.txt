@@ -98,6 +98,7 @@ Table of Contents
        3.4.6.  has
      3.5.  Default Values
        3.5.1.  default
+     3.6.  Enabling the Extnensions
    4.  Implementation Considerations
    5.  Security Considerations
    6.  IANA Considerations
@@ -455,6 +456,41 @@ Table of Contents
        "name": {
          "type": "string",
          "default": "John Doe"
+       }
+     }
+   }
+
+3.6.  Enabling the Extnensions
+
+   Validation extensions can be enabled in a schema or meta-schema by
+   adding the JSONSchemaValidation key to the $uses clause when
+   referencing the extended meta-schema:
+
+   {
+     "$schema": "https://json-structure.github.io/meta/extended/v0/#",
+     "$id": "myschema",
+     "$uses": [
+       "JSONSchemaValidation",
+     ],
+     "type": "object",
+     "properties": {
+       "name": {
+         "type": "string",
+         "pattern": "^[A-Z][a-z]+$"
+       }
+     }
+   }
+
+   The extensions are enabled by default in the validation meta-schema:
+
+   {
+     "$schema": "https://json-structure.github.io/meta/validation/v0/#",
+     "$id": "myschema",
+     "type": "object",
+     "properties": {
+       "name": {
+         "type": "string",
+         "pattern": "^[A-Z][a-z]+$"
        }
      }
    }
