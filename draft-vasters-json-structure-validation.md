@@ -440,6 +440,45 @@ Example:
 }
 ~~~
 
+## Enabling the Extnensions {#enabling-the-extensions}
+
+Validation extensions can be enabled in a schema or
+meta-schema by adding the `JSONSchemaValidation` key to the `$uses`
+clause when referencing the extended meta-schema:
+
+~~~ json
+{
+  "$schema": "https://json-structure.github.io/meta/extended/v0/#",
+  "$id": "myschema",
+  "$uses": [
+    "JSONSchemaValidation",
+  ],
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[A-Z][a-z]+$"
+    }
+  }
+}
+~~~
+
+The extensions are enabled by default in the validation meta-schema:
+
+~~~ json
+{
+  "$schema": "https://json-structure.github.io/meta/validation/v0/#",
+  "$id": "myschema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[A-Z][a-z]+$"
+    }
+  }
+}
+~~~
+
 # Implementation Considerations {#implementation-considerations}
 
 Validators shall process each validation keyword independently and combine
