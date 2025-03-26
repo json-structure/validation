@@ -4,10 +4,10 @@
 
 This is the working area for the individual Internet-Draft, "JSON Structure Validation Extensions".
 
-* [Editor's Copy](https://json-structure.github.io/validation/#go.draft-vasters-httpapi-json-structure-validation.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-vasters-httpapi-json-structure-validation)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-vasters-httpapi-json-structure-validation)
-* [Compare Editor's Copy to Individual Draft](https://json-structure.github.io/validation/#go.draft-vasters-httpapi-json-structure-validation.diff)
+* [Editor's Copy](https://json-structure.github.io/validation/#go.draft-vasters-json-structure-validation.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-vasters-json-structure-validation)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-vasters-json-structure-validation)
+* [Compare Editor's Copy to Individual Draft](https://json-structure.github.io/validation/#go.draft-vasters-json-structure-validation.diff)
 
 
 ## Contributing
