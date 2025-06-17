@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-15T01:56:11.377685+00:00",
+  "timestamp": "2025-06-17T01:47:27.353800+00:00",
   "repo": "json-structure/validation",
   "labels": [
     {
@@ -49,6 +49,25 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOONqd1M67lunK",
+      "title": "Clarify the role of \"patternProperties and patternKeys\"",
+      "url": "https://github.com/json-structure/validation/issues/1",
+      "state": "OPEN",
+      "author": "clemensv",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [
+        "clemensv"
+      ],
+      "labels": [],
+      "body": "The `patternProperties` and `patternKeys` restrictions are somewhat ambiguous with the `keyNames` and `propertyNames` restrictions. Reconcile and clarify those and also make clear that these are NOT providing definitions.",
+      "createdAt": "2025-06-15T08:06:31Z",
+      "updatedAt": "2025-06-15T08:06:31Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
   "pulls": []
 }
