@@ -11,9 +11,7 @@ consensus: true
 v: 3
 area: Web and Internet Transport
 workgroup: Building Blocks for HTTP APIs
-keyword:
- - JSON
- - schema
+keyword: Internet-Draft
 venue:
   group: TBD
   type: Working Group
