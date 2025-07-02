@@ -1,16 +1,16 @@
 ---
 
 title: "JSON Structure: Validation Extensions"
-category: info
+category: std
 
 docname: draft-vasters-json-structure-validation-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
-date:
+date: 2025-07-02
 consensus: true
 v: 3
-area: AREA
-workgroup: TBD
+area: Web and Internet Transport
+workgroup: Building Blocks for HTTP APIs
 keyword:
  - JSON
  - schema
