@@ -6,7 +6,7 @@ category: std
 docname: draft-vasters-json-structure-validation-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
-date: 2025-07-02
+date: 2025-12-04
 consensus: true
 v: 3
 area: Web and Internet Transport
@@ -438,7 +438,7 @@ Example:
 }
 ~~~
 
-## Enabling the Extnensions {#enabling-the-extensions}
+## Enabling the Extensions {#enabling-the-extensions}
 
 Validation extensions can be enabled in a schema or
 meta-schema by adding the `JSONSchemaValidation` key to the `$uses`
@@ -449,7 +449,7 @@ clause when referencing the extended meta-schema:
   "$schema": "https://json-structure.org/meta/extended/v0/#",
   "$id": "myschema",
   "$uses": [
-    "JSONSchemaValidation",
+    "JSONSchemaValidation"
   ],
   "type": "object",
   "properties": {
@@ -496,6 +496,12 @@ constructs may impact performance and should be optimized.
 This document has no IANA actions.
 
 --- back
+
+# Changes from draft-vasters-json-structure-validation-00
+{:numbered="false"}
+
+- Fixed typo in "Enabling the Extensions" section title.
+- Fixed invalid JSON in example (removed trailing comma).
 
 # Acknowledgments
 {:numbered="false"}
