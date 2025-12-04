@@ -4,8 +4,8 @@
 
 Building Blocks for HTTP APIs                                 C. Vasters
 Internet-Draft                                     Microsoft Corporation
-Intended status: Standards Track                             2 July 2025
-Expires: 3 January 2026
+Intended status: Standards Track                         4 December 2025
+Expires: 7 June 2026
 
 
                  JSON Structure: Validation Extensions
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 January 2026.
+   This Internet-Draft will expire on 7 June 2026.
 
 Copyright Notice
 
@@ -95,11 +95,12 @@ Table of Contents
        3.4.6.  has
      3.5.  Default Values
        3.5.1.  default
-     3.6.  Enabling the Extnensions
+     3.6.  Enabling the Extensions
    4.  Implementation Considerations
    5.  Security Considerations
    6.  IANA Considerations
    7.  Normative References
+   Changes from draft-vasters-json-structure-validation-00
    Acknowledgments
    Author's Address
 
@@ -457,7 +458,7 @@ Table of Contents
      }
    }
 
-3.6.  Enabling the Extnensions
+3.6.  Enabling the Extensions
 
    Validation extensions can be enabled in a schema or meta-schema by
    adding the JSONSchemaValidation key to the $uses clause when
@@ -467,7 +468,7 @@ Table of Contents
      "$schema": "https://json-structure.org/meta/extended/v0/#",
      "$id": "myschema",
      "$uses": [
-       "JSONSchemaValidation",
+       "JSONSchemaValidation"
      ],
      "type": "object",
      "properties": {
@@ -536,6 +537,12 @@ Table of Contents
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+Changes from draft-vasters-json-structure-validation-00
+
+   *  Fixed typo in "Enabling the Extensions" section title.
+
+   *  Fixed invalid JSON in example (removed trailing comma).
 
 Acknowledgments
 
