@@ -6,9 +6,9 @@ category: std
 docname: draft-vasters-json-structure-validation-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
-date: 2026-06-08
+date: 2026-06-09
 consensus: true
-v: 3
+v: 2
 area: Web and Internet Transport
 workgroup: Building Blocks for HTTP APIs
 keyword: Internet-Draft
