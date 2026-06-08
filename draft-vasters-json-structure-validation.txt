@@ -389,13 +389,16 @@ Table of Contents
 
 3.4.4.  patternProperties and patternKeys
 
-   This keyword applies schemas to properties whose names match
-   specified regular expressions.  For each property in the object
-   instance, if its name matches a regular expression defined in
-   patternProperties, then its value MUST validate against the
-   corresponding schema.  The property names used as keys in
-   patternProperties MUST be strings representing valid regular
-   expressions conforming to the [ECMA_262_2022] standard.  The
+   This keyword applies validation schemas to the *values* of properties
+   whose names match specified regular expressions.  It does not define
+   or declare properties; rather, it constrains the values of any
+   properties that happen to match the given patterns.
+
+   For each property in the object instance, if its name matches a
+   regular expression defined in patternProperties, then its value MUST
+   validate against the corresponding schema.  The property names used
+   as keys in patternProperties MUST be strings representing valid
+   regular expressions conforming to the [ECMA_262_2022] standard.  The
    patternKeys keyword applies equivalently to map types.
 
    Example:
@@ -413,10 +416,13 @@ Table of Contents
 
 3.4.5.  propertyNames and keyNames
 
-   The propertyNames keyword validates the names of all properties in an
-   object against a string-typed schema.  An object is valid if every
-   property name in the object is valid.  The schema MUST be of type
-   string.  The keyNames keyword applies equivalently to map types.
+   The propertyNames keyword constrains the *names* of all properties in
+   an object.  Unlike patternProperties, which validates property values
+   based on name patterns, propertyNames validates the names themselves
+   against a string-typed schema.  An object is valid only if every
+   property name in the object satisfies the given schema.  The schema
+   MUST be of type string.  The keyNames keyword applies equivalently to
+   map types.
 
    Example:
 
