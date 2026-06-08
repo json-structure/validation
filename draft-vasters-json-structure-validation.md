@@ -28,7 +28,7 @@ author:
 
 normative:
   RFC2119:
-  RFC4646:
+  RFC5646:
   RFC8174:
   JSTRUCT-CORE:
     title: "JSON Structure Core"
@@ -405,8 +405,8 @@ Example:
 
 ### `has` {#has}
 
-The `has` keyword validates that an object or map has at least one (property)
-value that matches the schema. The schema MUST be of type `object`.
+The `has` keyword validates that an object or map has at least one value
+that matches the schema. The schema MUST be of type `object`.
 
 Example:
 
@@ -441,8 +441,8 @@ Example:
 ## Enabling the Extensions {#enabling-the-extensions}
 
 Validation extensions can be enabled in a schema or
-meta-schema by adding the `JSONSchemaValidation` key to the `$uses`
-clause when referencing the extended meta-schema:
+meta-schema by adding `JSONSchemaValidation` to the `$uses`
+array when referencing the extended meta-schema:
 
 ~~~ json
 {
