@@ -503,6 +503,17 @@ This document has no IANA actions.
 
 --- back
 
+# Changes from draft-vasters-json-structure-validation-01
+{:numbered="false"}
+
+- Updated obsolete RFC 4646 reference to RFC 5646 (BCP 47).
+- Fixed terminology: `$uses` is an array, not a "clause"; entries are not
+  "keys".
+- Removed awkward parenthetical "(property)" in `has` keyword definition.
+- Clarified roles of `patternProperties`/`patternKeys` vs
+  `propertyNames`/`keyNames`: the former validates property values by name
+  pattern, the latter validates names themselves.
+
 # Changes from draft-vasters-json-structure-validation-00
 {:numbered="false"}
 
