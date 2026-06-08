@@ -100,6 +100,7 @@ Table of Contents
    5.  Security Considerations
    6.  IANA Considerations
    7.  Normative References
+   Changes from draft-vasters-json-structure-validation-01
    Changes from draft-vasters-json-structure-validation-00
    Acknowledgments
    Author's Address
@@ -542,6 +543,20 @@ Table of Contents
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+Changes from draft-vasters-json-structure-validation-01
+
+   *  Updated obsolete RFC 4646 reference to RFC 5646 (BCP 47).
+
+   *  Fixed terminology: $uses is an array, not a "clause"; entries are
+      not "keys".
+
+   *  Removed awkward parenthetical "(property)" in has keyword
+      definition.
+
+   *  Clarified roles of patternProperties/patternKeys vs propertyNames/
+      keyNames: the former validates property values by name pattern,
+      the latter validates names themselves.
 
 Changes from draft-vasters-json-structure-validation-00
 
