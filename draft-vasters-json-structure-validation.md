@@ -8,7 +8,7 @@ submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date: 2026-06-09
 consensus: true
-v: 2
+v: 3
 area: Web and Internet Transport
 workgroup: Building Blocks for HTTP APIs
 keyword: Internet-Draft
