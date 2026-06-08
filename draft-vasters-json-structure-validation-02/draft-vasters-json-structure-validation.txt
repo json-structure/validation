@@ -100,6 +100,7 @@ Table of Contents
    5.  Security Considerations
    6.  IANA Considerations
    7.  Normative References
+   Changes from draft-vasters-json-structure-validation-01
    Changes from draft-vasters-json-structure-validation-00
    Acknowledgments
    Author's Address
@@ -389,13 +390,16 @@ Table of Contents
 
 3.4.4.  patternProperties and patternKeys
 
-   This keyword applies schemas to properties whose names match
-   specified regular expressions.  For each property in the object
-   instance, if its name matches a regular expression defined in
-   patternProperties, then its value MUST validate against the
-   corresponding schema.  The property names used as keys in
-   patternProperties MUST be strings representing valid regular
-   expressions conforming to the [ECMA_262_2022] standard.  The
+   This keyword applies validation schemas to the *values* of properties
+   whose names match specified regular expressions.  It does not define
+   or declare properties; rather, it constrains the values of any
+   properties that happen to match the given patterns.
+
+   For each property in the object instance, if its name matches a
+   regular expression defined in patternProperties, then its value MUST
+   validate against the corresponding schema.  The property names used
+   as keys in patternProperties MUST be strings representing valid
+   regular expressions conforming to the [ECMA_262_2022] standard.  The
    patternKeys keyword applies equivalently to map types.
 
    Example:
@@ -413,10 +417,13 @@ Table of Contents
 
 3.4.5.  propertyNames and keyNames
 
-   The propertyNames keyword validates the names of all properties in an
-   object against a string-typed schema.  An object is valid if every
-   property name in the object is valid.  The schema MUST be of type
-   string.  The keyNames keyword applies equivalently to map types.
+   The propertyNames keyword constrains the *names* of all properties in
+   an object.  Unlike patternProperties, which validates property values
+   based on name patterns, propertyNames validates the names themselves
+   against a string-typed schema.  An object is valid only if every
+   property name in the object satisfies the given schema.  The schema
+   MUST be of type string.  The keyNames keyword applies equivalently to
+   map types.
 
    Example:
 
@@ -428,8 +435,7 @@ Table of Contents
 3.4.6.  has
 
    The has keyword validates that an object or map has at least one
-   (property) value that matches the schema.  The schema MUST be of type
-   object.
+   value that matches the schema.  The schema MUST be of type object.
 
    Example:
 
@@ -461,8 +467,8 @@ Table of Contents
 3.6.  Enabling the Extensions
 
    Validation extensions can be enabled in a schema or meta-schema by
-   adding the JSONSchemaValidation key to the $uses clause when
-   referencing the extended meta-schema:
+   adding JSONSchemaValidation to the $uses array when referencing the
+   extended meta-schema:
 
    {
      "$schema": "https://json-structure.org/meta/extended/v0/#",
@@ -530,13 +536,27 @@ Table of Contents
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/rfc/rfc2119>.
 
-   [RFC4646]  Phillips, A. and M. Davis, "Tags for Identifying
-              Languages", RFC 4646, DOI 10.17487/RFC4646, September
-              2006, <https://www.rfc-editor.org/rfc/rfc4646>.
+   [RFC5646]  Phillips, A., Ed. and M. Davis, Ed., "Tags for Identifying
+              Languages", BCP 47, RFC 5646, DOI 10.17487/RFC5646,
+              September 2009, <https://www.rfc-editor.org/rfc/rfc5646>.
 
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+Changes from draft-vasters-json-structure-validation-01
+
+   *  Updated obsolete RFC 4646 reference to RFC 5646 (BCP 47).
+
+   *  Fixed terminology: $uses is an array, not a "clause"; entries are
+      not "keys".
+
+   *  Removed awkward parenthetical "(property)" in has keyword
+      definition.
+
+   *  Clarified roles of patternProperties/patternKeys vs propertyNames/
+      keyNames: the former validates property values by name pattern,
+      the latter validates names themselves.
 
 Changes from draft-vasters-json-structure-validation-00
 
