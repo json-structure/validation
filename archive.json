@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-07T04:08:11.086456+00:00",
+  "timestamp": "2026-06-09T03:40:51.917194+00:00",
   "repo": "json-structure/validation",
   "labels": [
     {
@@ -55,7 +55,7 @@
       "id": "I_kwDOONqd1M67lunK",
       "title": "Clarify the role of \"patternProperties and patternKeys\"",
       "url": "https://github.com/json-structure/validation/issues/1",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "clemensv",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [
@@ -64,10 +64,111 @@
       "labels": [],
       "body": "The `patternProperties` and `patternKeys` restrictions are somewhat ambiguous with the `keyNames` and `propertyNames` restrictions. Reconcile and clarify those and also make clear that these are NOT providing definitions.",
       "createdAt": "2025-06-15T08:06:31Z",
-      "updatedAt": "2025-06-15T08:06:31Z",
-      "closedAt": null,
+      "updatedAt": "2026-06-08T09:47:59Z",
+      "closedAt": "2026-06-08T09:47:59Z",
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOONqd1M8AAAABEs8Uzg",
+      "title": "Editorial: obsolete RFC reference, terminology, awkward phrasing",
+      "url": "https://github.com/json-structure/validation/issues/2",
+      "state": "CLOSED",
+      "author": "clemensv",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The following minor editorial issues were found during review:\n\n### 1. Obsolete RFC4646 reference\n\n`RFC4646` in the references block is obsolete. It should be updated to `RFC5646` (the current BCP 47 reference for language tags).\n\n### 2. Terminology in `` description\n\nThe text says:\n> adding the `JSONSchemaValidation` key to the `` clause\n\n`` is an array (not a \"clause\"), and `JSONSchemaValidation` is an entry (not a \"key\"). Suggested fix: \"adding `JSONSchemaValidation` to the `` array\".\n\n### 3. Awkward parenthetical in `has` keyword definition\n\n> The `has` keyword validates that an object or map has at least one (property) value that matches the schema.\n\nThe parenthetical \"(property)\" is unnecessary and reads awkwardly. Suggest removing it.",
+      "createdAt": "2026-06-08T06:27:39Z",
+      "updatedAt": "2026-06-08T08:51:02Z",
+      "closedAt": "2026-06-08T08:51:02Z",
       "comments": []
     }
   ],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 3,
+      "id": "PR_kwDOONqd1M7j0N2E",
+      "title": "Editorial: fix obsolete RFC reference and phrasing",
+      "url": "https://github.com/json-structure/validation/pull/3",
+      "state": "MERGED",
+      "author": "clemensv",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- Update RFC4646 to RFC5646 (BCP 47)\n- Fix terminology: `\\` is an array, not a 'clause'; entries are not 'keys'\n- Remove awkward parenthetical '(property)' in `has` keyword definition\n\nFixes #2",
+      "createdAt": "2026-06-08T08:27:47Z",
+      "updatedAt": "2026-06-08T08:51:01Z",
+      "baseRepository": "json-structure/validation",
+      "baseRefName": "main",
+      "baseRefOid": "5186698cc75634fbea9872f76697afca2137e95c",
+      "headRepository": "json-structure/validation",
+      "headRefName": "editorial/fix-rfc-reference-and-phrasing",
+      "headRefOid": "056760d493093dad33a354c78322935d103b1a9d",
+      "closedAt": "2026-06-08T08:51:00Z",
+      "mergedAt": "2026-06-08T08:51:00Z",
+      "mergedBy": "clemensv",
+      "mergeCommit": {
+        "oid": "5ac76b404f1f86eaca732f6d67a45d3c220e8ca5"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOONqd1M7j2AEg",
+      "title": "Clarify roles of patternProperties/patternKeys vs propertyNames/keyNames",
+      "url": "https://github.com/json-structure/validation/pull/4",
+      "state": "MERGED",
+      "author": "clemensv",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Addresses the ambiguity noted in #1:\n\n- **patternProperties/patternKeys**: clarified that these validate property *values* based on name patterns, and explicitly state they do NOT define or declare properties (they are validation-only constraints).\n- **propertyNames/keyNames**: clarified that these validate property *names themselves*, and explicitly contrast with patternProperties so readers understand when to use which.\n\nFixes #1",
+      "createdAt": "2026-06-08T09:46:26Z",
+      "updatedAt": "2026-06-08T09:47:58Z",
+      "baseRepository": "json-structure/validation",
+      "baseRefName": "main",
+      "baseRefOid": "5ac76b404f1f86eaca732f6d67a45d3c220e8ca5",
+      "headRepository": "json-structure/validation",
+      "headRefName": "editorial/clarify-patternProperties-propertyNames",
+      "headRefOid": "14eb58ebba7ba7b6bd3a61a140d183a76a547d3d",
+      "closedAt": "2026-06-08T09:47:58Z",
+      "mergedAt": "2026-06-08T09:47:58Z",
+      "mergedBy": "clemensv",
+      "mergeCommit": {
+        "oid": "6038cfd73bd4e1b4bae7aa1edb46d814ef19f0db"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOONqd1M7j2WeG",
+      "title": "Update changes section for draft-02",
+      "url": "https://github.com/json-structure/validation/pull/5",
+      "state": "MERGED",
+      "author": "clemensv",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Adds the changes section documenting updates since draft-vasters-json-structure-validation-01.",
+      "createdAt": "2026-06-08T10:00:24Z",
+      "updatedAt": "2026-06-08T15:22:42Z",
+      "baseRepository": "json-structure/validation",
+      "baseRefName": "main",
+      "baseRefOid": "6038cfd73bd4e1b4bae7aa1edb46d814ef19f0db",
+      "headRepository": "json-structure/validation",
+      "headRefName": "editorial/update-changes-section",
+      "headRefOid": "90ccdd16fc03a9c74e5cf3d8b970f62ee818a4a8",
+      "closedAt": "2026-06-08T15:22:42Z",
+      "mergedAt": "2026-06-08T15:22:42Z",
+      "mergedBy": "clemensv",
+      "mergeCommit": {
+        "oid": "91bc977c4d963861644b7d7f840ad6565c9d610b"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
 }
